@@ -1,0 +1,22 @@
+{
+  "name": "twitter-discord-webhook",
+  "version": "1.0.0",
+  "description": "Send tweets to a Discord channel instantly using the Twitter API and Discord Webhooks.",
+  "main": "index.js",
+  "dependencies": {
+    "discord-webhook-node": "^1.1.8",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "twit": "^2.2.11"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gskril/twitter-discord-webhook.git"
+  },
+  "author": "Greg Skriloff",
+  "license": "ISC",
+  "homepage": "https://github.com/gskril/twitter-discord-webhook#readme"
+}
