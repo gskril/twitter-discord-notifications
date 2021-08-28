@@ -2,6 +2,7 @@
 Send tweets to a Discord channel instantly using the Twitter API and Discord Webhooks
 
 ## Prerequisites
+- [Twitter developer account](https://developer.twitter.com/en/apply-for-access)
 - NodeJS
 - NPM
 - Git
@@ -37,8 +38,12 @@ Send tweets to a Discord channel instantly using the Twitter API and Discord Web
   
   
 ## How To Run 24/7
-1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) then press "Manage App"
 2. Go to the Settings tab of your new project in Heroku and press "Reveal Config Vars"
-3. Configure things as you would in step 4 of the above section "How To Use (Locally)"
+3. Add the following keys, then enter the values as you would in step 4 from the above section:
+	- twitterApikey
+	- twitterAccessToken
+	- twitterApiSecretKey
+	- twitterAccessTokenSecret
 4. To keep the app running 24/7, go to the Resources tab and press "Change Dyno Type"
 5. Upgrade to the "Hobby" plan

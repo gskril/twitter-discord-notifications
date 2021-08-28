@@ -6,6 +6,10 @@ const Twit = require("twit")
 const { Webhook } = require('discord-webhook-node');
 const hook = new Webhook(process.env.discordWebook);
 
+app.get('/', function(req, res) {
+	res.send('Howdy 👋🏼')
+});
+
 // Twitter API config
 const twitterApikey = process.env.twitterApikey
 const twitterApiSecretKey = process.env.twitterApiSecretKey
