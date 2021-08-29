@@ -2,7 +2,7 @@
 	"name": "Twitter Notifications in Discord ",
 	"description": "Send tweets to a Discord channel instantly",
 	"repository": "https://github.com/gskril/twitter-discord-notifications",
-	"logo": "https://raw.githubusercontent.com/gskril/twitter-discord-notifications/main/logo.jpg",
+	"logo": "https://raw.githubusercontent.com/gskril/twitter-discord-notifications/main/logo.png",
 	"env": {
 		"twitterApiKey": "",
 		"twitterAccessToken": "",
