@@ -45,5 +45,10 @@ Send tweets to a Discord channel instantly using the Twitter API and Discord Web
 	- twitterAccessToken
 	- twitterApiSecretKey
 	- twitterAccessTokenSecret
-4. To keep the app running 24/7, go to the Resources tab and press "Change Dyno Type"
-5. Upgrade to the "Hobby" plan
+4. To keep the app running 24/7, create a free account on [UptimeRobot](https://uptimerobot.com/signUp) and configure a monitor
+	- Once logged in press "Add New Monitor"
+	- Select the type "HTTPS"
+	- Friendly name can be anything like the name of your website
+	- URL is the URL of your website including https://
+	- Set the monitoring interval to 25 minutes
+	- Press "Create Monitor"
