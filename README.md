@@ -2,10 +2,15 @@
 Send tweets to a Discord channel instantly using the Twitter API and Discord Webhooks
 
 ## Prerequisites
+Everything is free!
 - [Twitter developer account](https://developer.twitter.com/en/apply-for-access)
-- NodeJS
-- NPM
-- Git
+- For local use:
+	- NodeJS
+	- NPM
+	- Git
+- For cloud use:
+	- [Heroku account](https://signup.heroku.com/)
+	- [UptimeRobot account](https://uptimerobot.com/signUp)
 
 ## How To Use (Locally)
 1. Clone the project
@@ -37,14 +42,10 @@ Send tweets to a Discord channel instantly using the Twitter API and Discord Web
 	```
   
   
-## How To Run 24/7
+## How to Run It 24/7 in the Cloud
 1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) then press "Manage App"
 2. Go to the Settings tab of your new project in Heroku and press "Reveal Config Vars"
-3. Add the following keys, then enter the values as you would in step 4 from the above section:
-	- twitterApikey
-	- twitterAccessToken
-	- twitterApiSecretKey
-	- twitterAccessTokenSecret
+3. Configure your Twitter API, Discord Webook, and enter the Twitter handle you want to monitor
 4. To keep the app running 24/7, create a free account on [UptimeRobot](https://uptimerobot.com/signUp) and configure a monitor
 	- Once logged in press "Add New Monitor"
 	- Select the type "HTTPS"

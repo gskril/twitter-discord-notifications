@@ -11,16 +11,11 @@ app.get('/', function(req, res) {
 });
 
 // Twitter API config
-const twitterApikey = process.env.twitterApikey
-const twitterApiSecretKey = process.env.twitterApiSecretKey
-const twitterAccessToken = process.env.twitterAccessToken
-const twitterAccessTokenSecret = process.env.twitterAccessTokenSecret
-
 var T = new Twit({
-	consumer_key: twitterApikey,
-	consumer_secret: twitterApiSecretKey,
-	access_token: twitterAccessToken,
-	access_token_secret: twitterAccessTokenSecret,
+	consumer_key: process.env.twitterApiKey,
+	consumer_secret: process.env.twitterApiSecretKey,
+	access_token: process.env.twitterAccessToken,
+	access_token_secret: process.env.twitterAccessTokenSecret,
 })
 
 // Get Twitter userid from username
