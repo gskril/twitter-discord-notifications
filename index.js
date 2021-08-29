@@ -1,14 +1,14 @@
 require("dotenv").config()
 const express = require("express")
 const app = express()
-const port = process.env.PORT || 8080
 const Twit = require("twit")
-const { Webhook } = require('discord-webhook-node');
-const hook = new Webhook(process.env.discordWebook);
+const { Webhook } = require('discord-webhook-node')
+const hook = new Webhook(process.env.discordWebook)
 
+app.listen(process.env.PORT || 8080)
 app.get('/', function(req, res) {
 	res.send('Howdy 👋🏼')
-});
+})
 
 // Twitter API config
 var T = new Twit({
@@ -31,7 +31,7 @@ function startMonitor(userid) {
 		if (tweet.user.screen_name == process.env.twitterAccountToMonitor) {
 			console.log(`New tweet: https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`)
 			// Send tweet link to Discord
-			hook.send('https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str);
+			hook.send('https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str)
 		}
 	})
 }

@@ -43,8 +43,9 @@ Everything is free!
   
   
 ## How to Run It 24/7 in the Cloud
-1. <a href="https://heroku.com/deploy" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 2. Configure your Twitter API, Discord Webook, and enter the Twitter handle you want to monitor under "Config Vars". Then press "Deploy app"
+	- To edit the settings later, go to the Settings tab in Heroku and press "Reveal Config Vars"
 3. To keep the app running 24/7, create a free account on [UptimeRobot](https://uptimerobot.com/signUp) and configure a monitor
 	- Once logged in press "Add New Monitor"
 	- Select the type "HTTPS"
