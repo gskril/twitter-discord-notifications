@@ -20,7 +20,8 @@ var T = new Twit({
 
 // Get Twitter userid from username
 T.get("users/lookup", { screen_name: process.env.twitterAccountToMonitor }, function (err, data, response) {
-	let userid = data[0].id
+	let userid = data[0].id_str
+	console.log(`Starting to monitor ${process.env.twitterAccountToMonitor}`)
 	startMonitor(userid)
 })
 
