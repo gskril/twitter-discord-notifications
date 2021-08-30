@@ -21,7 +21,7 @@ var T = new Twit({
 // Get Twitter userid from username
 T.get("users/lookup", { screen_name: process.env.twitterAccountToMonitor }, function (err, data, response) {
 	let userid = data[0].id_str
-	console.log(`Starting to monitor ${process.env.twitterAccountToMonitor}`)
+	console.log(`Starting to monitor @${process.env.twitterAccountToMonitor}`)
 	startMonitor(userid)
 })
 
@@ -29,7 +29,7 @@ T.get("users/lookup", { screen_name: process.env.twitterAccountToMonitor }, func
 function startMonitor(userid) {
 	var stream = T.stream("statuses/filter", { follow: userid })
 	stream.on("tweet", function (tweet) {
-		if (tweet.user.screen_name == process.env.twitterAccountToMonitor) {
+		if (tweet.user.screen_name === process.env.twitterAccountToMonitor && tweet.retweeted_status === void 0 && tweet.is_quote_status === false && tweet.in_reply_to_status_id === null) {
 			console.log(`New tweet: https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`)
 			// Send tweet link to Discord
 			hook.send('https://twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str)
